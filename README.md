@@ -7,7 +7,17 @@ Create two(2) visualisation with a menu which allows user to choose between the 
 My plan:
 Making visualisation about Ireland: Electricity consumption per capita (kWh) data set.
 Create a line graph with extra features.
-Create a pie chart or another visualisation with extra features.
+Create a bar chart or another visualisation with extra features.
+
+This is the line graph I made that when you hover the mouse from left to right two lines in colour purple will show where in the line graph is the year and the Electric consumption for that year.
+It also show the year and electric consumption in text form in the middle top area.
+By pressing 1 or 2 the graph will change from line graph to bar graph respectively.
+
+(images/Capture1.png)
+
+This is the bar graph I made. The smaller bar graph show the individual record per year and the 5 big bar graph show the sum of the smaller bar graph that is inside of the big bar graph.
+
+(images/Capture2.png)
 
 Resource:
 [Data set](http://www.factfish.com/statistic-country/ireland/electricity%20consumption%20per%20capita)
