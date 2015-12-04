@@ -13,11 +13,11 @@ This is the line graph I made that when you hover the mouse from left to right t
 It also show the year and electric consumption in text form in the middle top area.
 By pressing 1 or 2 the graph will change from line graph to bar graph respectively.
 
-!(images/Capture1.png)
+![line graph](images/Capture1.PNG)
 
 This is the bar graph I made. The smaller bar graph show the individual record per year and the 5 big bar graph show the sum of the smaller bar graph that is inside of the big bar graph.
 
-![Sketch](images/Capture2.png)
+![bar graph](images/Capture2.PNG)
 
 Resource:
 [Data set](http://www.factfish.com/statistic-country/ireland/electricity%20consumption%20per%20capita)
