@@ -243,7 +243,13 @@ void bargraph(ArrayList<IEEC> data)
     float x1 = map(i, 0, data.size()-1, border, rightBorderRange-individualbarwidth); 
     float y1 = map(data.get(i).Amount, 0, indvVertMaxRange, 0, MaxindvBarheight);
     fill(data.get(i).colours);
+    if (mouseX > x1 && mouseX < x1 + individualbarwidth )
+    {
+      fill(255);
+      ellipse(x1+7, botBorderRange + 10 , 10, 10);
+    }
     rect(x1, botBorderRange, individualbarwidth, -y1 );
+     
   }
   
   //mouseX hover..gives year and data 
