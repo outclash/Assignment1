@@ -103,29 +103,31 @@ void linegraph(ArrayList<IEEC> data)
   //mouseX hover..gives year and data 
   stroke(255, 0, 255);
   if (mouseX < border)
-  {
-    mouseX = (int)border;
-  } else if (mouseX > (rightBorderRange))
-  {
-    mouseX = (int)(rightBorderRange);
-  }
-
-  //hover, maps mouseX to get the data.get[number]
-  int hover = (int)map(mouseX, 100, 800, 0, data.size()-1); 
-
-  // get the location of the data from the graph
-  float y2location = map(data.get(hover).Amount, 0, vertMaxRange, botBorderRange, border); 
-
-  //draws the hovering line
-  line( mouseX, botBorderRange, mouseX, y2location);
-  line(border, y2location, mouseX, y2location);
-
-  //Writes down the values
-  text("Electric Consumption: " + data.get(hover).Amount, 400, 100);
-  text("Year: " + data.get(hover).Year, 400, 120);
-
-  println("" +hover);
-  println("" + mouseX);
+   {
+     mouseX = (int)border;
+   } 
+  else if (mouseX > (rightBorderRange))
+   {
+     mouseX = (int)(rightBorderRange);
+   }
+   
+    //hover, maps mouseX to get the data.get[number]
+    int hover = (int)map(mouseX, border, rightBorderRange, 0, data.size()-1); 
+  
+    // get the location of the data from the graph
+    float y2location = map(data.get(hover).Amount, 0, vertMaxRange, botBorderRange, border); 
+  
+    //draws the hovering line
+    line( mouseX, botBorderRange, mouseX, y2location);
+    line(border, y2location, mouseX, y2location);
+  
+    //Writes down the values
+    text("Electric Consumption: " + data.get(hover).Amount, 400, 100);
+    text("Year: " + data.get(hover).Year, 400, 120);
+  
+    println("" +hover);
+    println("" + mouseX);
+  
 }
 
 
@@ -254,21 +256,21 @@ void bargraph(ArrayList<IEEC> data)
   
   //mouseX hover..gives year and data 
   if (mouseX < border)
-  {
-    mouseX = (int)border;
-  } else if (mouseX > (rightBorderRange))
-  {
-    mouseX = (int)(rightBorderRange);
-  }
-
-  //hover, maps mouseX to get the data.get[number]
-  int hover = (int)map(mouseX, 100, 800, 0, data.size()-1); 
-
-  //Writes down the values
-  stroke(200, 200, 200);
-  fill(200, 200, 200); 
-  text("Electric Consumption: " + data.get(hover).Amount, 400, 100);
-  text("Year: " + data.get(hover).Year, 400, 120);
+   {
+     mouseX = (int)border;
+   } 
+  else if (mouseX > (rightBorderRange))
+   {
+     mouseX = (int)(rightBorderRange);
+   }
+    //hover, maps mouseX to get the data.get[number]
+    int hover = (int)map(mouseX, 100, 800, 0, data.size()-1); 
   
-  text("Total sum: " + sum[0], 850, 120);
+    //Writes down the values
+    stroke(200, 200, 200);
+    fill(200, 200, 200); 
+    text("Electric Consumption: " + data.get(hover).Amount, 400, 100);
+    text("Year: " + data.get(hover).Year, 400, 120);
+    
+    text("Total sum: " + sum[0], 850, 120);
 }
